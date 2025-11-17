@@ -14,9 +14,89 @@ video {
 }
 
 .site-header {
-  background: black;
+  background: url(../image/background/myd.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
 }
 
-.logo {
-  color: red;
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+.nav {
+  display: flex;
+  padding: 20px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background: #0a0a0a;
+}
+a {
+  color: #fff;
+  text-align: center;
+  font-family: Krub;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  list-style: none;
+  text-decoration: none;
+}
+
+.introdution {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  position: absolute;
+
+  left: 10%;
+  right: 42%;
+  bottom: 21%;
+  backdrop-filter: blur(10px);
+}
+
+.intro {
+  display: flex;
+  width: 450.373px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 30px;
+}
+
+.introdution h1 {
+  color: #fff;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #fff;
+  font-family: "JHC Audemars";
+  font-size: 110px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 105%; /* 115.5px */
+  letter-spacing: 11px;
+  text-transform: uppercase;
+}
+.intro p {
+  color: #fff;
+  text-align: right;
+  font-family: Krub;
+  font-size: 18px;
+}
+
+.intro button {
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border: 0;
+  color: #0a0a0a;
+  text-align: center;
+  font-family: Krub;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
