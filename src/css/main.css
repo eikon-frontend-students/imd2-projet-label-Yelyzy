@@ -13,6 +13,10 @@ video {
   display: block;
 }
 
-h1 {
-  color: blue;
+.site-header {
+  background: black;
+}
+
+.logo {
+  color: red;
 }
