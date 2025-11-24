@@ -56,7 +56,6 @@ a {
   align-items: flex-end;
   gap: 16px;
   position: absolute;
-
   left: 160px;
   right: 41.5%;
   bottom: 21%;
@@ -147,20 +146,13 @@ main {
   opacity: 0.3;
 }
 
-.forms {
+.forms.orange {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   align-self: stretch;
   background-color: #0a0a0a;
   margin-top: -1px;
-}
-.artists {
-  display: flex;
-  padding-top: 120px;
-  flex-direction: column;
-  align-items: center;
-  gap: 60px;
 }
 
 .artists h2 {
@@ -169,12 +161,14 @@ main {
   font-size: 48px;
   font-weight: 700;
   text-transform: uppercase;
+  padding: 120px 160px 60px 160px;
 }
 
 .card {
   position: relative;
-  min-width: 400px;
+  min-height: 455px;
   aspect-ratio: 1;
+  flex: 1 0 0;
 }
 
 .card img {
@@ -198,7 +192,6 @@ main {
   height: 100%;
   padding: 60px;
   display: flex;
-
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
@@ -214,11 +207,35 @@ main {
 
 .card-artists {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
+
+  align-items: flex-start;
+  align-content: flex-start;
   align-self: stretch;
   flex-wrap: wrap;
   gap: 0px;
   width: 100%;
+  background-color: #0a0a0a;
+}
+
+.forms.blue {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  margin-top: -80px;
+  position: relative;
+  z-index: 10;
+}
+
+.releases {
+  background: #00cfc7;
+}
+
+.releases h2 {
+  color: #0a0a0a;
+  font-family: Krub;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 120px 160px 60px 160px;
 }

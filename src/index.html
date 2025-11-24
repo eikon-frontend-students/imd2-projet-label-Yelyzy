@@ -60,14 +60,13 @@
         </div>
       </div>
 
-      <div class="forms">
+      <div class="forms orange">
         <img class="triamgle" src="image/forms/form1.svg" alt="" />
         <img class="triamgle" src="image/forms/form2.svg" alt="" />
       </div>
 
       <div class="artists">
         <h2>Artists</h2>
-
         <div class="card-artists">
           <include
             src="./components/card.html"
@@ -86,9 +85,43 @@
 
           <include
             src="./components/card.html"
+            locals='{"artistName": "London Grammar", "artistImage": "./image/artiste/LondonGrammar.jpg"}'
+          ></include>
+
+          <include
+            src="./components/card.html"
             locals='{"artistName": "MYD", "artistImage": "./image/artiste/MYD.jpg"}'
           ></include>
+
+          <include
+            src="./components/card.html"
+            locals='{"artistName": "Aime Simone", "artistImage": "./image/artiste/AimeSimone.jpg"}'
+          ></include>
+
+          <include
+            src="./components/card.html"
+            locals='{"artistName": "BUSY P", "artistImage": "./image/artiste/BUSYP.png"}'
+          ></include>
+
+          <include
+            src="./components/card.html"
+            locals='{"artistName": "Sébastien Tellier", "artistImage": "./image/artiste/SébastienTellier.jpg"}'
+          ></include>
+
+          <include
+            src="./components/card.html"
+            locals='{"artistName": "Charlie Motto", "artistImage": "./image/artiste/CharlieMotto.jpg"}'
+          ></include>
         </div>
+
+        <div class="forms blue">
+          <img class="triamgle" src="image/forms/form3.svg" alt="" />
+          <img class="triamgle" src="image/forms/form4.svg" alt="" />
+        </div>
+      </div>
+
+      <div class="releases">
+        <h2>Releases</h2>
       </div>
     </main>
     <script src="js/main.js" type="module"></script>
