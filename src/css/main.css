@@ -25,13 +25,13 @@ body {
   width: 100%;
 }
 
-.menu {
+.site-header .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px;
 }
-.nav {
+.site-header .nav {
   display: flex;
   padding: 20px 24px;
   justify-content: center;
@@ -39,7 +39,7 @@ body {
   gap: 30px;
   background: #0a0a0a;
 }
-a {
+.site-header a {
   color: #fff;
   text-align: center;
   font-family: Krub;
@@ -498,4 +498,96 @@ main {
   font-weight: 600;
   text-transform: uppercase;
   margin: 60px 0;
+}
+
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 120px 148px;
+  background: #0a0a0a;
+  color: #fff;
+}
+.site-footer .listes-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.site-footer .nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--espace-20, 20px);
+}
+
+.site-footer h2 {
+  color: #fff;
+  font-family: Krub;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.site-footer .list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  list-style: none;
+}
+.site-footer .list-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  color: var(--color-white-100, #fff);
+  font-family: "Font Awesome";
+  font-size: var(--type-24, 24px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.site-footer a {
+  color: #fff;
+  text-align: center;
+  font-family: Krub;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.site-footer .liens {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 100px;
+}
+
+.site-footer .lien {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  list-style: none;
+}
+
+.site-footer .lien a,
+p {
+  text-decoration: none;
+  color: var(--color-white-100, #fff);
+  font-family: Krub;
+  font-size: var(--type-12, 12px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
