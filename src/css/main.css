@@ -268,7 +268,6 @@ main {
 
 .news .info {
   display: flex;
-  height: 452px;
   flex-direction: column;
   align-items: flex-start;
   gap: 60px;
@@ -319,12 +318,11 @@ main {
   line-height: normal;
   display: -webkit-box;
   width: 555px;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 6;
 }
 
 .news img {
   width: 40%;
+  height: 100%;
   height: auto;
   object-fit: cover;
 }
@@ -590,4 +588,180 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.form-wrap {
+  display: flex;
+  padding: 60px 160px 120px 160px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  gap: 60px;
+  align-self: stretch;
+}
+
+.title {
+  color: var(--color-white-100, #fff);
+  font-family: Krub;
+  font-size: var(--type-48, 48px);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  align-self: stretch;
+}
+
+/* Rows */
+.row.two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* Fields */
+.field label {
+  display: table;
+  padding: 0 20px;
+  margin-bottom: -13px;
+  left: 20px;
+  position: relative;
+  background-color: #e13100;
+  color: var(--color-white-100, #fff);
+  font-family: Krub;
+  font-size: var(--type-20, 20px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.field input,
+.field textarea {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: transparent;
+  border: 2px solid var(--color-white-100, #fff);
+  height: 56px;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #fff;
+  opacity: 50%;
+  font-family: Krub;
+  font-size: var(--type-14, 14px);
+}
+
+.field textarea {
+  height: 160px;
+}
+
+.counter {
+  color: var(--color-white-100, #fff);
+  text-align: right;
+  font-family: Krub;
+  font-size: 12px;
+  padding: 10px 20px;
+  line-height: var(--Body-Small-Line-Height, 16px); /* 133.333% */
+  letter-spacing: var(--Body-Small-Tracking, 0.4px);
+}
+
+.upload {
+  height: 160px;
+  margin-top: 13px;
+}
+.upload {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex: 1 0 0;
+  align-self: stretch;
+  border: 2px dashed var(--color-white-100, #fff);
+}
+
+.upload-label {
+  color: var(--color-white-100, #fff);
+  text-align: center;
+  font-family: Krub;
+  font-size: var(--type-18, 18px);
+  font-weight: 600;
+}
+
+/* Custom file button */
+.upload input[type="file"] {
+  display: none;
+}
+
+.upload-btn {
+  border: 1px solid var(--color-white-100, #fff);
+  padding: 10px 24px;
+  color: #fff;
+  text-align: center;
+  font-family: Krub;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+}
+
+.checkbox input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffffff;
+  background: transparent;
+  border-radius: 0;
+  position: relative;
+}
+
+.checkbox span {
+  color: var(--color-white-100, #fff);
+  font-family: Krub;
+  font-size: var(--type-18, 18px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.submit {
+  display: flex;
+  padding: 17px 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit:hover,
+.upload-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Responsive tweaks */
+@media (max-width: 820px) {
+  .row.two {
+    grid-template-columns: 1fr;
+  }
+  .submit {
+    width: 100%;
+  }
 }

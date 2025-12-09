@@ -1,0 +1,74 @@
+<section class="form-wrap">
+  <h1 class="title">JOIN THE LABEL</h1>
+
+  <form class="form">
+    <div class="formulaire">
+      <div class="row two">
+        <div class="field">
+          <label for="name">NAME</label>
+          <input id="name" name="name" type="text" placeholder="" />
+        </div>
+
+        <div class="field">
+          <label for="stageName">STAGE NAME</label>
+          <input id="stageName" name="stageName" type="text" placeholder="" />
+        </div>
+      </div>
+
+      <div class="row two">
+        <div class="field">
+          <label for="email">ADRESSE E-MAIL</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="lara.klatt@gmail.com"
+          />
+        </div>
+
+        <div class="field">
+          <label for="musicLink">LINK TO YOUR MUSIC</label>
+          <input
+            id="musicLink"
+            name="musicLink"
+            type="url"
+            placeholder="Spotify, SoundCloud, YouTube ..."
+          />
+        </div>
+      </div>
+
+      <div class="row two">
+        <div class="field">
+          <label for="bio">SHORT BIO</label>
+          <textarea
+            id="bio"
+            name="bio"
+            maxlength="300"
+            placeholder=""
+          ></textarea>
+          <div class="counter">0/300</div>
+        </div>
+
+        <div class="upload">
+          <span class="upload-label"
+            >Upload press kit or photo (optional)]</span
+          >
+          <label class="upload-btn" for="presskit">Upload file</label>
+          <input
+            id="presskit"
+            name="presskit"
+            type="file"
+            accept="image/*,.pdf,.zip"
+          />
+        </div>
+      </div>
+
+      <label class="checkbox">
+        <input type="checkbox" name="agree" />
+        <span> I agree to the terms and conditions</span>
+      </label>
+    </div>
+
+    <button class="submit">SUMIT</button>
+  </form>
+</section>
