@@ -805,16 +805,16 @@ p {
 
 /* Artiste */
 
-.artiste-header {
-  background: url(../image/background/Justice.jpg);
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  width: 100%;
-}
-
 .artiste-header .introdution {
-  right: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  position: absolute;
+  left: 160px;
+  right: 41.5%;
+  bottom: 21%;
+  backdrop-filter: blur(10px);
 }
 
 .artiste-header .introdution h1 {
