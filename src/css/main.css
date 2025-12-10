@@ -89,9 +89,9 @@ a {
   font-size: 18px;
 }
 
-.intro button {
+.small {
   display: flex;
-  padding: 12px 24px;
+  padding: 12px 50px;
   justify-content: center;
   align-items: center;
   background: #fff;
@@ -102,6 +102,16 @@ a {
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
+  clip-path: polygon(
+    20px 0,
+    calc(100% - 20px) 0,
+    100% 0px,
+    100% calc(100% - 20px),
+    calc(100% - 20px) 100%,
+    0px 100%,
+    0 calc(100% - 20px),
+    0 20px
+  );
 }
 
 main {
@@ -265,7 +275,7 @@ button {
     calc(100% - 25px) 100%,
     0px 100%,
     0 calc(100% - 25px),
-    0 30px
+    0 25px
   );
 }
 
