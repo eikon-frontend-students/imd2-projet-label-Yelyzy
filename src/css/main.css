@@ -254,6 +254,13 @@ main {
   gap: 60px;
 }
 
+.releases .titre {
+  display: flex;
+  padding: 0px 160px;
+  padding-bottom: 30px;
+  align-self: stretch;
+}
+
 .releases h2 {
   color: #0a0a0a;
   font-family: Krub;
@@ -876,4 +883,15 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 135%; /* 24.3px */
+}
+
+.artiste-page .releases {
+  padding: 120px 0px 120px;
+}
+
+.forms.blue.reverse {
+  background-color: var(--color-bleu-100, #e13100);
+  transform: scaleY(-1);
+  margin-top: -1px;
+  background-color: #0a0a0a;
 }
