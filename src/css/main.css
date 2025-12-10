@@ -57,14 +57,14 @@ a {
   gap: 16px;
   position: absolute;
   left: 160px;
-  right: 41.5%;
+  max-width: 678px;
+  right: 160px;
   bottom: 21%;
-  backdrop-filter: blur(10px);
 }
 
 .site-header .intro {
   display: flex;
-  width: 450.373px;
+  max-width: 450.373px;
   flex-direction: column;
   align-items: flex-end;
   gap: 30px;
