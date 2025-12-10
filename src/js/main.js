@@ -1,16 +1,5 @@
-const crewMembers = [
-  { name: "Alex Carter", role: "CEO" },
-  { name: "Sofia Lee", role: "Design Lead" },
-  { name: "Ryan Mitchell", role: "Full Stack Developer" },
-  { name: "Chloe Morgan", role: "Marketing Head" },
-  { name: "Daniel Smith", role: "Project Manager" },
-  { name: "Mia Johnson", role: "Content Strategist" },
-];
-
 const crewCards = document.querySelectorAll(".crew-card");
 const crewDots = document.querySelectorAll(".crew-dot");
-const crewName = document.querySelector(".crew-name");
-const crewRole = document.querySelector(".crew-role");
 
 let crewIndex = 0;
 let crewAnimating = false;
@@ -43,16 +32,6 @@ function updateCrewCarousel(newIndex) {
   crewDots.forEach((dot, i) => {
     dot.classList.toggle("active", i === crewIndex);
   });
-
-  crewName.style.opacity = "0";
-  crewRole.style.opacity = "0";
-
-  setTimeout(() => {
-    crewName.textContent = crewMembers[crewIndex].name;
-    crewRole.textContent = crewMembers[crewIndex].role;
-    crewName.style.opacity = "1";
-    crewRole.style.opacity = "1";
-  }, 300);
 
   setTimeout(() => {
     crewAnimating = false;

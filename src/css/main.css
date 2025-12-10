@@ -227,19 +227,6 @@ main {
   z-index: 10;
 }
 
-.releases {
-  background: #00cfc7;
-}
-
-.releases h2 {
-  color: #0a0a0a;
-  font-family: Krub;
-  font-size: 48px;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 120px 160px 60px 160px;
-}
-
 .news {
   display: flex;
   padding: 120px 80px;
@@ -341,11 +328,24 @@ main {
   text-transform: uppercase;
 }
 
+/* releases */
+
 .releases {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: #00cfc7;
+  padding: 120px 160px 60px 160px;
+  gap: 60px;
+}
+
+.releases h2 {
+  color: #0a0a0a;
+  font-family: Krub;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .crew-carousel {
@@ -495,7 +495,6 @@ main {
   font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
-  margin: 60px 0;
 }
 
 .site-footer {
@@ -744,6 +743,16 @@ p {
   line-height: normal;
 }
 
+.checkbox input[type="checkbox"]:checked::after {
+  content: "✔";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: #ffffff;
+}
+
 .submit {
   display: flex;
   padding: 17px 30px;
@@ -751,12 +760,6 @@ p {
   align-items: center;
 }
 
-.submit:hover,
-.upload-btn:hover {
-  background: rgba(255, 255, 255, 0.08);
-}
-
-/* Responsive tweaks */
 @media (max-width: 820px) {
   .row.two {
     grid-template-columns: 1fr;
