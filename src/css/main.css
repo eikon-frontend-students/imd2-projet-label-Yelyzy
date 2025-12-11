@@ -49,6 +49,13 @@ body {
     0 30px
   );
 }
+
+.burger-menu {
+  display: none;
+  padding: 10px 20px;
+  background: transparent;
+}
+
 a {
   color: #fff;
   text-align: center;
@@ -912,8 +919,7 @@ p {
   background-color: #0a0a0a;
 }
 
-/* media */
-/* Tablet and Medium Screens (800px - 1000px) */
+/* media 1000px */
 @media (max-width: 1000px) {
   .introdution {
     max-width: 500px;
@@ -1009,6 +1015,10 @@ p {
     display: flex;
   }
 
+  .site-footer .liens > :first-child {
+    display: none;
+  }
+
   .row.two {
     grid-template-columns: 1fr;
   }
@@ -1039,12 +1049,17 @@ p {
   }
 }
 
-/* Mobile Screens (max-width: 600px) */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
+  .burger-menu {
+    display: flex;
+  }
   .menu .nav {
     display: none;
   }
+}
 
+/* Mobile 600px */
+@media (max-width: 600px) {
   .site-header {
     background: url(../image/background/mydmobil.jpg);
     background-size: cover;
@@ -1158,7 +1173,7 @@ p {
   }
 
   .crew-card.left-2 {
-    transform: translateX(-470px) scale(0.7);
+    transform: translateX(-440px) scale(0.7);
   }
 
   .crew-card.right-1 {
@@ -1166,7 +1181,7 @@ p {
   }
 
   .crew-card.right-2 {
-    transform: translateX(470px) scale(0.7);
+    transform: translateX(440px) scale(0.7);
   }
 
   .crew-card.center {
@@ -1327,10 +1342,6 @@ p {
   .site-footer .lien a,
   .site-footer .lien p {
     font-size: 11px;
-  }
-
-  .site-footer .liens > :first-child {
-    display: none;
   }
 
   button {
