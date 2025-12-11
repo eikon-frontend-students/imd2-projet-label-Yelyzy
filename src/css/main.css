@@ -504,6 +504,7 @@ button {
   align-items: flex-start;
   gap: 30px;
   flex: 1 0 0;
+  width: 100%;
 }
 
 .news .info {
@@ -919,8 +920,150 @@ p {
   background-color: #0a0a0a;
 }
 
-/* media 1000px */
-@media (max-width: 1000px) {
+.live {
+  display: flex;
+  padding: 40px 160px 120px;
+  flex-direction: column;
+  align-items: space-between;
+  gap: var(--espace-60, 60px);
+  align-self: stretch;
+  background: #0a0a0a;
+}
+
+.live h2 {
+  color: #fff;
+  font-family: Krub;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.list-tickets {
+  display: flex;
+  gap: 120px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  flex: 1 0 0;
+}
+
+.ticket {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  gap: 40px;
+}
+
+.ticket .info-ticket {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.ticket .info-ticket .info {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.ticket .info-ticket .info.date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticket .info-ticket .info .month {
+  color: #fff;
+  font-family: Krub;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.ticket .info-ticket .info .day {
+  ccolor: #fff;
+  font-family: Krub;
+  font-size: 32px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.ticket .info-ticket .info .name {
+  overflow: hidden;
+  color: #fff;
+  text-overflow: ellipsis;
+  font-family: Krub;
+  font-size: 20px;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.ticket .info-ticket .info .location {
+  overflow: hidden;
+  color: #fff;
+  text-overflow: ellipsis;
+  font-family: Krub;
+  font-size: 18px;
+  opacity: 0.5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.see-all-dates {
+  display: none;
+}
+
+@media (max-width: 1350px) {
+  .list-tickets {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .list-tickets {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .ticket {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    gap: 40px;
+  }
+
+  .list-secondary {
+    display: none;
+  }
+
+  .see-all-dates {
+    display: block;
+    margin: 0 auto;
+    padding: 17px 60px;
+    font-size: 18px;
+    background: #e13100;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+/* media 1100px */
+@media (max-width: 1100px) {
   .introdution {
     max-width: 500px;
     left: 80px;
@@ -979,7 +1122,7 @@ p {
   }
 
   .releases .titre {
-    padding: 0 40px;
+    padding: 0 80px;
   }
 
   .crew-dots {
@@ -1010,7 +1153,7 @@ p {
   .site-footer .list-row {
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
     list-style: none;
     display: flex;
   }

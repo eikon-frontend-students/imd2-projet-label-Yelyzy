@@ -66,3 +66,22 @@ document.addEventListener("touchend", (e) => {
 });
 
 updateCrewCarousel(0);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const seeAllBtn = document.getElementById("seeAllDatesBtn");
+  const secondaryDates = document.getElementById("secondaryDates");
+
+  seeAllBtn.addEventListener("click", () => {
+    if (
+      secondaryDates.style.display === "none" ||
+      secondaryDates.style.display === ""
+    ) {
+      secondaryDates.style.display = "flex"; // показываем вторую колонку
+      secondaryDates.style.flexDirection = "column"; // чтобы она шла снизу
+      seeAllBtn.textContent = "Hide dates"; // меняем текст кнопки
+    } else {
+      secondaryDates.style.display = "none"; // скрываем обратно
+      seeAllBtn.textContent = "See all dates";
+    }
+  });
+});
