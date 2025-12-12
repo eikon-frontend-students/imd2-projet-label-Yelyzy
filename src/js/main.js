@@ -85,3 +85,56 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+(function () {
+  const menu = document.querySelector(".menu");
+  if (!menu) return;
+
+  // ensure placeholder exists and matches menu height
+  let ph = document.querySelector(".menu-placeholder");
+  if (!ph) {
+    ph = document.createElement("div");
+    ph.className = "menu-placeholder";
+    menu.after(ph);
+  }
+  const syncPh = () =>
+    (ph.style.height = `${menu.getBoundingClientRect().height}px`);
+  syncPh();
+  window.addEventListener("resize", syncPh);
+
+  // scrolled shadow
+  const TH = 10;
+  const onScroll = () => menu.classList.toggle("scrolled", window.scrollY > TH);
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  // observe sections with data-menu-bg or data-menu-theme
+  const secs = document.querySelectorAll("[data-menu-bg], [data-menu-theme]");
+  if (secs.length === 0) return;
+  const io = new IntersectionObserver(
+    (entries) => {
+      const vis = entries
+        .filter((e) => e.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (!vis) return;
+      const el = vis.target;
+      // apply inline bg if provided
+      if (el.dataset.menuBg) menu.style.background = el.dataset.menuBg;
+      else menu.style.background = "";
+      // theme class
+      menu.classList.remove("theme-light", "theme-dark");
+      if (el.dataset.menuTheme)
+        menu.classList.add(`theme-${el.dataset.menuTheme}`);
+    },
+    {
+      root: null,
+      rootMargin: "0px 0px -60% 0px",
+      threshold: [0, 0.2, 0.5, 0.8, 1],
+    }
+  );
+
+  secs.forEach((s, i) => {
+    if (!s.dataset.menuId) s.dataset.menuId = `m-${i}`;
+    io.observe(s);
+  });
+})();
