@@ -522,16 +522,17 @@ button {
   justify-content: center;
   align-items: center;
   align-self: stretch;
+  gap: 0;
 }
 
 .news .content {
   display: flex;
+  justify-content: space-between;
+  align-items: stretch;
   padding: 0px 70px;
-  justify-content: center;
-  align-items: flex-start;
   gap: 30px;
   flex: 1 0 0;
-  width: 100%;
+  height: 550px;
 }
 
 .news .info {
@@ -539,7 +540,7 @@ button {
   flex-direction: column;
   align-items: flex-start;
   gap: 60px;
-  flex: 1 0 0;
+  max-width: 545px;
 }
 
 .news h3 {
@@ -563,13 +564,13 @@ button {
 
 .news h2 {
   color: #fff;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #fff;
   font-family: "JHC Audemars";
-  font-size: 110px;
+  font-size: 100px;
   font-style: italic;
   font-weight: 700;
-  line-height: 112%;
+  line-height: 105%; /* 115.5px */
   letter-spacing: 11px;
   text-transform: uppercase;
   align-self: stretch;
@@ -585,13 +586,15 @@ button {
   font-weight: 400;
   line-height: normal;
   display: -webkit-box;
-  width: 555px;
 }
 
 .news img {
-  min-height: 100%;
-  height: auto;
+  display: block;
+  height: 100%;
   object-fit: cover;
+  flex: 0 1 auto;
+  max-width: 100%;
+  min-width: 40%;
 }
 
 .forms.noir.reverse {
@@ -607,6 +610,7 @@ button {
   align-items: flex-start;
   gap: 60px;
 }
+
 .formulaire {
   display: flex;
   flex-direction: column;
