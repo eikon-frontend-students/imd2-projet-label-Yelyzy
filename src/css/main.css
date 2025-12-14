@@ -1281,6 +1281,10 @@ p {
     flex-direction: column;
     gap: 30px;
   }
+
+  .bio-artiste .info-artiste {
+    gap: 30px;
+  }
 }
 
 /* Mobile 750px */
