@@ -16,20 +16,22 @@ video {
 body {
   background: #e13100;
 }
-
-.site-header {
-  background: url(../image/background/myd.jpg);
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  width: 100%;
-}
+/* index.html */
+/* меню */
 
 .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  list-style-type: none;
+  background: transparent;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
 }
 
 .menu .nav {
@@ -51,18 +53,6 @@ body {
   );
 }
 
-/* menu fixed */
-.menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-  background: transparent;
-  transition: background 0.25s ease, box-shadow 0.25s ease;
-}
-
-/* subtle shadow on scroll */
 .menu.scrolled {
   background: linear-gradient(
     90deg,
@@ -88,6 +78,22 @@ a {
   text-transform: uppercase;
   list-style: none;
   text-decoration: none;
+}
+
+.menu .nav li:hover a {
+  color: #e13100;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* site-header */
+
+.site-header {
+  background: url(../image/background/myd.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
 }
 
 .site-header .introdution {
@@ -129,6 +135,8 @@ a {
   font-size: 18px;
 }
 
+/* button petit */
+
 .small {
   display: flex;
   padding: 12px 50px;
@@ -154,10 +162,48 @@ a {
   );
 }
 
+.small:hover {
+  background: none;
+  box-shadow: inset 0 0 0 1.5px #fff;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+/* button grand */
+
+button {
+  display: flex;
+  padding: 17px 50px;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border: none;
+  color: #e13100;
+  text-align: center;
+  font-family: Krub;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  clip-path: polygon(
+    25px 0,
+    calc(100% - 25px) 0,
+    100% 0px,
+    100% calc(100% - 25px),
+    calc(100% - 25px) 100%,
+    0px 100%,
+    0 calc(100% - 25px),
+    0 25px
+  );
+}
+
+/* main */
+
 main {
   display: flex;
   flex-direction: column;
 }
+
+/* stats */
 
 .stats-card {
   display: flex;
@@ -207,6 +253,8 @@ main {
   background-color: #0a0a0a;
   margin-top: -1px;
 }
+
+/* artists */
 
 .artists h2 {
   color: #fff;
@@ -302,34 +350,10 @@ main {
   z-index: 10;
 }
 
-button {
-  display: flex;
-  padding: 17px 50px;
-  justify-content: center;
-  align-items: center;
-  background: #fff;
-  border: none;
-  color: #e13100;
-  text-align: center;
-  font-family: Krub;
-  font-size: 20px;
-  font-weight: 600;
-  text-transform: uppercase;
-  clip-path: polygon(
-    25px 0,
-    calc(100% - 25px) 0,
-    100% 0px,
-    100% calc(100% - 25px),
-    calc(100% - 25px) 100%,
-    0px 100%,
-    0 calc(100% - 25px),
-    0 25px
-  );
-}
+/* releases */
 
 .releases {
   display: flex;
-
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -438,7 +462,6 @@ button {
 
 .crew-card.right-1 {
   transform: translateX(300px) scale(0.9);
-
   opacity: 0.9;
   filter: grayscale(80%);
   background: var(--color-white-10, rgba(255, 255, 255, 0.1));
@@ -492,6 +515,12 @@ button {
   cursor: pointer;
 }
 
+.releases button {
+  background: #0a0a0a;
+
+  color: #fff;
+}
+
 .forms.noir {
   display: flex;
   justify-content: space-between;
@@ -501,11 +530,7 @@ button {
   margin-top: -1px;
 }
 
-.releases button {
-  background: #0a0a0a;
-
-  color: #fff;
-}
+/* news */
 
 .news {
   display: flex;
@@ -596,6 +621,8 @@ button {
   max-width: 100%;
   min-width: 40%;
 }
+
+/* forms */
 
 .forms.noir.reverse {
   background-color: var(--color-bleu-100, #e13100);
@@ -713,7 +740,6 @@ button {
   font-weight: 600;
 }
 
-/* Custom file button */
 .upload input[type="file"] {
   display: none;
 }
@@ -768,6 +794,8 @@ button {
 .submit {
   color: #0a0a0a;
 }
+
+/* footer */
 
 .site-footer {
   display: flex;
@@ -863,10 +891,10 @@ p {
   line-height: normal;
 }
 
-/* Artiste */
+/* Artiste-page */
 
 .artiste-header {
-  background: url(../image/background/Justice.jpg);
+  background: url(../image/background/justice.jpg);
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -894,6 +922,8 @@ p {
   font-weight: 500;
   text-transform: uppercase;
 }
+
+/* bio-artiste */
 
 .bio-artiste {
   display: flex;
@@ -946,6 +976,8 @@ p {
   line-height: 135%; /* 24.3px */
 }
 
+/* artiste-releases */
+
 .artiste-page .releases {
   padding: 120px 0px 120px;
 }
@@ -957,6 +989,8 @@ p {
   background-color: #0a0a0a;
 }
 
+/* artiste-live */
+
 .live {
   display: flex;
   padding: 40px 160px 120px;
@@ -965,6 +999,7 @@ p {
   gap: var(--espace-60, 60px);
   align-self: stretch;
   background: #0a0a0a;
+  border-bottom: 1px solid var(--color-white-100, #fff);
 }
 
 .live h2 {
@@ -1005,13 +1040,13 @@ p {
 
 .ticket .info-ticket .info {
   display: flex;
-
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
 
 .ticket .info-ticket .info.date {
+  width: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1026,7 +1061,7 @@ p {
 }
 
 .ticket .info-ticket .info .day {
-  ccolor: #fff;
+  color: #fff;
   font-family: Krub;
   font-size: 32px;
   font-weight: 500;
@@ -1057,11 +1092,22 @@ p {
   -webkit-line-clamp: 1;
 }
 
+.ticket .small {
+  background: #e13100;
+  color: #fff;
+}
+.ticket .small:hover {
+  background: none;
+  box-shadow: inset 0 0 0 1.5px #e13100;
+  color: #e13100;
+  transition: all 0.2s ease;
+}
+
 .see-all-dates {
   display: none;
 }
 
-/* media */
+/* media media media media media media */
 
 @media (max-width: 1350px) {
   .list-tickets {
@@ -1186,59 +1232,6 @@ p {
     padding: 0 80px;
   }
 
-  .crew-dots {
-    margin: 0px;
-  }
-
-  .form-wrap {
-    padding: 40px 80px 80px 80px;
-  }
-
-  .bio-artiste {
-    padding: 80px 40px;
-  }
-
-  .bio-artiste .info-artiste {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .site-footer {
-    padding: 80px 80px;
-  }
-
-  .site-footer .liens {
-    flex-direction: row;
-    gap: 60px;
-  }
-
-  .site-footer .list-row {
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 20px;
-    list-style: none;
-    display: flex;
-  }
-
-  .site-footer .liens > :first-child {
-    display: none;
-  }
-
-  .row.two {
-    grid-template-columns: 1fr;
-  }
-
-  .formulaire {
-    gap: 30px;
-  }
-
-  .upload {
-    margin-top: 0px;
-  }
-
-  .submit {
-    width: auto;
-  }
-
   .news {
     padding: 80px 35px;
   }
@@ -1265,6 +1258,51 @@ p {
     letter-spacing: 8px;
   }
 
+  .crew-dots {
+    margin: 0px;
+  }
+
+  .form-wrap {
+    padding: 40px 80px 80px 80px;
+  }
+
+  .row.two {
+    grid-template-columns: 1fr;
+  }
+
+  .formulaire {
+    gap: 30px;
+  }
+
+  .upload {
+    margin-top: 0px;
+  }
+
+  .submit {
+    width: auto;
+  }
+
+  .site-footer {
+    padding: 80px 80px;
+  }
+
+  .site-footer .liens {
+    flex-direction: row;
+    gap: 60px;
+  }
+
+  .site-footer .list-row {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    display: flex;
+  }
+
+  .site-footer .liens > :first-child {
+    display: none;
+  }
+
   .artiste-header .introdution {
     max-width: 500px;
     right: 80px;
@@ -1283,7 +1321,25 @@ p {
   }
 
   .bio-artiste .info-artiste {
-    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bio-artiste {
+    padding: 80px 80px 120px;
+    gap: 40px;
+  }
+
+  .bio-artiste .info-artiste {
+    gap: 40px;
+  }
+
+  .artiste-page .releases {
+    padding: 80px 0;
+    gap: 40px;
+  }
+
+  .live {
+    padding: 40px 80px 80px;
   }
 }
 
@@ -1297,6 +1353,36 @@ p {
     width: 100%;
   }
 
+  .small {
+    padding: 10px 30px;
+    font-size: 14px;
+    clip-path: polygon(
+      17px 0,
+      calc(100% - 17px) 0,
+      100% 0px,
+      100% calc(100% - 17px),
+      calc(100% - 17px) 100%,
+      0px 100%,
+      0 calc(100% - 17px),
+      0 17px
+    );
+  }
+
+  button {
+    padding: 12px 30px;
+    font-size: 14px;
+    clip-path: polygon(
+      20px 0,
+      calc(100% - 20px) 0,
+      100% 0px,
+      100% calc(100% - 20px),
+      calc(100% - 20px) 100%,
+      0px 100%,
+      0 calc(100% - 20px),
+      0 20px
+    );
+  }
+
   .menu {
     padding: 10px 20px;
   }
@@ -1306,12 +1392,6 @@ p {
   }
   .menu .nav {
     display: none;
-  }
-
-  .news .content {
-    flex-direction: column; /* колонки в колонку */
-    align-items: stretch;
-    height: auto;
   }
 
   .menu .logo {
@@ -1335,11 +1415,6 @@ p {
   }
 
   .site-header .intro p {
-    font-size: 14px;
-  }
-
-  .small {
-    padding: 10px 30px;
     font-size: 14px;
   }
 
@@ -1400,7 +1475,7 @@ p {
   }
 
   .releases {
-    gap: 30px;
+    gap: 20px;
     padding: 60px 0px 20px;
   }
 
@@ -1438,6 +1513,12 @@ p {
     transform: scale(1);
   }
 
+  .news .content {
+    flex-direction: column; /* колонки в колонку */
+    align-items: stretch;
+    height: auto;
+  }
+
   .news > .conteiner > svg {
     display: none;
   }
@@ -1457,8 +1538,14 @@ p {
     text-align: center;
   }
 
+  .news p {
+    width: 100%;
+    font-size: 14px;
+  }
+
   .news .info {
     max-width: 100%;
+    gap: 20px;
   }
 
   .news .titre {
@@ -1476,15 +1563,6 @@ p {
     flex-direction: column;
     padding: 0;
     gap: 20px;
-  }
-
-  .news .info {
-    gap: 20px;
-  }
-
-  .news p {
-    width: 100%;
-    font-size: 14px;
   }
 
   .news img {
@@ -1545,34 +1623,6 @@ p {
     font-size: 14px;
   }
 
-  .bio-artiste {
-    padding: 60px 20px;
-    gap: 40px;
-  }
-
-  .bio-artiste h2 {
-    font-size: 32px;
-    text-align: center;
-  }
-
-  .bio-artiste .info-artiste {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .bio-artiste .info-artiste .intro {
-    font-size: 18px;
-  }
-
-  .bio-artiste .info-artiste .info p {
-    font-size: 14px;
-  }
-
-  .artiste-header .introdution h1 {
-    font-size: 80px;
-    letter-spacing: 8px;
-  }
-
   .site-footer {
     padding: 40px 20px;
     gap: 40px;
@@ -1605,13 +1655,8 @@ p {
     font-size: 11px;
   }
 
-  button {
-    padding: 12px 30px;
-    font-size: 14px;
-  }
-
   .artiste-header {
-    background: url(../image/background/mydmobil.jpg);
+    background: url(../image/background/justicemobil.jpg);
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -1629,8 +1674,67 @@ p {
     letter-spacing: 4px;
   }
 
+  .artiste-header .intro p {
+    max-width: 360px;
+    font-size: 14px;
+  }
+
   .artiste-header .intro {
     max-width: 100%;
     gap: 20px;
+  }
+
+  .bio-artiste {
+    align-items: center;
+    padding: 60px 40px 120px;
+    gap: 40px;
+  }
+
+  .bio-artiste h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .bio-artiste .info-artiste {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .bio-artiste .info-artiste .intro {
+    font-size: 18px;
+  }
+
+  .bio-artiste .info-artiste .info p {
+    font-size: 14px;
+  }
+
+  .artiste-header .introdution h1 {
+    font-size: 80px;
+    letter-spacing: 8px;
+  }
+
+  .artiste-page .releases {
+    padding: 60px 0;
+    gap: 20px;
+  }
+
+  .live {
+    padding: 40px 40px 84px;
+  }
+
+  .ticket .info-ticket .info .month {
+    font-size: 12px;
+  }
+
+  .ticket .info-ticket .info .day {
+    font-size: 24px;
+  }
+
+  .ticket .info-ticket .info .name {
+    font-size: 16px;
+  }
+
+  .ticket .info-ticket .info .location {
+    font-size: 14px;
   }
 }
