@@ -80,10 +80,9 @@ a {
   text-decoration: none;
 }
 
-.menu .nav li:hover a {
+.nav li:hover a {
   color: #e13100;
-  font-weight: bold;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 /* site-header */
@@ -171,6 +170,7 @@ a {
 
 /* button grand */
 
+.big,
 button {
   display: flex;
   padding: 17px 50px;
@@ -194,6 +194,14 @@ button {
     0 calc(100% - 25px),
     0 25px
   );
+}
+
+.big:hover,
+button:hover {
+  background: none;
+  box-shadow: inset 0 0 0 2px #fff;
+  color: #fff;
+  transition: all 0.2s ease;
 }
 
 /* main */
@@ -515,10 +523,17 @@ main {
   cursor: pointer;
 }
 
-.releases button {
+.releases .big {
   background: #0a0a0a;
 
   color: #fff;
+}
+
+.releases .big:hover {
+  background: none;
+  box-shadow: inset 0 0 0 2px #0a0a0a;
+  color: #0a0a0a;
+  transition: all 0.2s ease;
 }
 
 .forms.noir {
@@ -690,11 +705,13 @@ main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background: transparent;
+  outline: none;
   border: 2px solid var(--color-white-100, #fff);
   height: 56px;
   width: 100%;
   padding: 10px 20px;
+  background-color: #e13100;
+  color: #fff;
 }
 
 .field input::placeholder,
@@ -1012,14 +1029,14 @@ p {
 
 .list-tickets {
   display: flex;
-  gap: 120px;
+  gap: 70px;
 }
 
 .list {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 30px;
+  gap: 0px;
   flex: 1 0 0;
 }
 
@@ -1028,12 +1045,29 @@ p {
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
-  gap: 40px;
+  padding: 20px 25px;
+}
+
+.ticket:hover {
+  background: none;
+  box-shadow: inset 0 0 0 1px #848484;
+  color: #fff;
+  transition: all 0.2s ease;
+  clip-path: polygon(
+    50px 0,
+    calc(100% - 50px) 0,
+    100% 0px,
+    100% calc(100% - 50px),
+    calc(100% - 50px) 100%,
+    0px 100%,
+    0 calc(100% - 50px),
+    0 50px
+  );
 }
 
 .ticket .info-ticket {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 40px;
 }
@@ -1046,7 +1080,6 @@ p {
 }
 
 .ticket .info-ticket .info.date {
-  width: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1078,6 +1111,7 @@ p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+  text-align: start;
 }
 
 .ticket .info-ticket .info .location {
@@ -1090,17 +1124,18 @@ p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+  text-align: start;
 }
 
 .ticket .small {
+  margin-left: 40px;
   background: #e13100;
   color: #fff;
 }
 .ticket .small:hover {
-  background: none;
-  box-shadow: inset 0 0 0 1.5px #e13100;
-  color: #e13100;
-  transition: all 0.2s ease;
+  background: #e13100;
+  box-shadow: none;
+  color: #fff;
 }
 
 .see-all-dates {
@@ -1111,24 +1146,14 @@ p {
 
 @media (max-width: 1350px) {
   .list-tickets {
-    gap: 60px;
-  }
-}
-
-@media (max-width: 1190px) {
-  .list-tickets {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 30px;
+    gap: 0px;
   }
 
-  .ticket {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-self: stretch;
-    gap: 40px;
+  .list-tickets {
+    gap: 0px;
   }
 
   .list-secondary {
@@ -1339,7 +1364,28 @@ p {
   }
 
   .live {
-    padding: 40px 80px 80px;
+    padding: 40px 0px 80px;
+    margin-top: -1px;
+  }
+
+  .live h2 {
+    padding: 0px 80px;
+  }
+
+  .list-tickets {
+    padding: 0px 55px;
+  }
+
+  .forms img {
+    width: 70px;
+  }
+
+  .forms.blue {
+    margin-top: -64px;
+  }
+
+  .forms.blue.reverse {
+    margin-top: -1px;
   }
 }
 
@@ -1368,7 +1414,7 @@ p {
     );
   }
 
-  button {
+  .big {
     padding: 12px 30px;
     font-size: 14px;
     clip-path: polygon(
@@ -1719,7 +1765,24 @@ p {
   }
 
   .live {
-    padding: 40px 40px 84px;
+    padding: 40px 0px 80px;
+    margin-top: -1px;
+  }
+
+  .live h2 {
+    padding: 0px 40px;
+  }
+
+  .list-tickets {
+    padding: 0px 15px;
+  }
+
+  .ticket .small {
+    margin-left: 20px;
+  }
+
+  .ticket .info-ticket {
+    gap: 20px;
   }
 
   .ticket .info-ticket .info .month {
@@ -1736,5 +1799,13 @@ p {
 
   .ticket .info-ticket .info .location {
     font-size: 14px;
+  }
+
+  .forms img {
+    width: 50px;
+  }
+
+  .crew-dots {
+    display: none;
   }
 }
